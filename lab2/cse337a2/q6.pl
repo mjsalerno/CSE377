@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#q6.pl
 use strict;
 use warnings;
 
