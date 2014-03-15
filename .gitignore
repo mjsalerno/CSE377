@@ -1,3 +1,6 @@
+#EXTRAS
+*.zip
+
 #python
 *.py[cod]
 
