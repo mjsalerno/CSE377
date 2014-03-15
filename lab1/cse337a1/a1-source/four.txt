@@ -1,0 +1,8 @@
+a)  The first expression will make a list with 3 of each element from lst. The second will make a list of lists, each
+    sub-list containing the same elements as lst.
+
+b)  Each of the second sub elements in arr will be replaced by 7 since setting them equal only makes a shallow copy.
+
+c)  This time the first list gets a deep copy in the first section then the first section gets shallow copied into
+    the rest of the list. So when you change an element in one of the sub lists it will be changed into
+    all of them.

@@ -1,0 +1,125 @@
+import math
+#five
+__author__ = 'michael'
+
+#lst = '230 104 316 110 104 126'
+
+
+def main():
+    lst = raw_input('Enter you course numbers: ')
+    l = lst.split()
+    dic = {}
+
+    st = set(l)
+
+    for i in st:
+        i = int(i)
+        i /= 100
+        i = math.floor(i)
+        i *= 100
+        i = int(i)
+
+        dic[i] = dic.get(i, 0) + 1
+
+    for key in dic:
+        print str(key) + ' : ' + str(dic[key]) + ' ',
+
+
+main()
+__author__ = 'michael'
+#one
+
+def main():
+    """print the second largest number in a set"""
+    pass
+
+    s = set()
+
+    while True:
+        n = input('Enter a number: ')
+        if n == -99:
+            break
+
+        s.add(n)
+
+    l = list(s)
+
+    if len(l) < 2:
+        print 'sorry but the list is too small'
+        exit(1)
+
+    l.sort()
+    print 'The second largest number is', l[-2]
+
+
+main()
+__author__ = 'michael'
+#seven
+
+def printprime(lst):
+    if len(lst) == 0:
+        return
+    print lst[0],
+    printprime(filter(lambda x: x % lst[0] != 0, lst))
+
+
+def main():
+    #lst = [randrange(1, 10) for _ in range(10)]
+    lst = range(2, 1001)
+    print filter(lambda x: x % lst[0] != 0, lst)
+    printprime(lst)
+
+main()
+__author__ = 'michael'
+#six
+#ask for month and year then find files matching greater than 12000 bytes
+#-rw-r--r-- 1 jsmith student 16858 17 Nov 2011 test1
+
+
+def main():
+    minsize = 12000
+    filename = raw_input('Enter the file name: ')
+    fil = open(filename, 'r')
+    month = raw_input('Which month are you interested in? ')
+    month = month.capitalize()
+    year = input('Which year are you interested in? ')
+
+    for line in fil:
+        lst = line.split()
+        if int(lst[4]) > minsize and lst[6] == month and int(lst[7]) == year:
+            print line,
+
+    fil.close()
+
+main()
+
+import sys
+#two
+__author__ = 'michael'
+
+msg = \
+    """fjxdfkb qebob'p kl zlrkqofbp fq fpk'q exoa ql al klqefkd ql hfii lo afb clo
+xka kl obifdflk qll fjxdfkb xii qeb mblmib ifsfkd ifcb fk mbxzb vlr jxv pxv
+qexq F'j x aobxjbo yrq F'j klq qeb lkiv lkb f elmb pljbaxv vlr'ii glfk rp
+xka qeb tloia tfii yb xp lkb
+"""
+
+
+def main():
+
+    print msg
+
+    for c in msg:
+        c = ord(c)
+        if (97 <= c) and (c <= 122):
+            c += 3
+            if c > 122:
+                c = (c-122) + 96
+
+        elif (65 <= c) and (c <= 90):
+            c += 3
+            if c > 90:
+                c = (c - 90) + 64
+
+        sys.stdout.write(str(chr(c)))
+main()

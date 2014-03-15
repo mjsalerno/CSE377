@@ -1,0 +1,7 @@
+3)
+    a)  If n and r are both 0 then the loop will continue to the top of the loop not printing x
+
+    b) It would continue the loop and print x, then loop back up until it reached the end of the range list or broke out of the loop, it
+        will be printing n and r while it loops
+
+    c)  it will do the same thing that a does except print 2's this time not o's

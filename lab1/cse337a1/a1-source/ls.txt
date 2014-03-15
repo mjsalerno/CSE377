@@ -1,0 +1,6 @@
+-rw-r--r-- 1 jsmith student 16858 17 Nov 2011 test1
+-rw-r--r-- 1 jsmith student 1344 17 Nov 2011 PaperListing2011
+-rw-r--r-- 1 jsmith student 35840 9 Jul 2012 2011.doc
+-rwxrwxrwx 1 jsmith student 2763443 4 Apr 2012 IMG_9090.JPG
+-rw-r--r-- 1 jsmith student 1484 24 Mar 2013 goldfish.txt
+-rw-r--r-- 1 jsmith student 163 17 Jan 2013 testtk.py

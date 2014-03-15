@@ -1,0 +1,48 @@
+﻿      course number: CSE337
+  assignment number: 1
+               name: Michael Salerno
+          ID number: 108512298
+python release used: 2.7.5
+      platform used: fedora linux
+
+one.py:
+    	Enter a number and press enter over and over. When you want to stop, input 	-99 like the questions asked.
+    	The second largest number will be printed.
+
+    	test case:
+        	1,2,3,4,6,5
+        	5,1,2,3,4,6
+
+two.py:
+    	The question specifically asked to decode the text in the question, so the 	text is hard coded. However if you wish to use a different message then 	change the value of msg to the message you want
+
+five.py:
+    	run the program and then enter a the course number on one line separated by 	spaces only
+
+    	test cases:
+        	100 200 300 400 401 110 404 404
+
+six.py
+    	Enter the text file of the ls output and then month, then year.
+    	There is a ls.txt that you can use that is from the sample in the question.
+
+seven.py:
+    	Just run the file, both parts were done in the same program since we needed 	to use the function we made in part one for part two.
+
+question three:
+    	a)  If n and r are both 0 then the loop will continue to the top of the loop 	not printing x
+
+    	b) It would continue the loop and print x, then loop back up until it reached 	the end of the range list or broke out of the loop, it
+    	will be printing n and r while it loops
+
+    	c)  it will do the same thing that a does except print 2's this time not o's
+
+
+question four:
+    	a)  The first expression will make a list with 3 of each element from lst. 	The second will make a list of lists, each
+     	sub-list containing the same elements as lst.
+
+    	b)  Each of the second sub elements in arr will be replaced by 7 since 	setting them equal only makes a shallow copy.
+
+    	c)  This time the first list gets a deep copy in the first section then the 	first section gets shallow copied into
+    	the rest of the list. So when you change an element in one of the sub lists 	it will be changed into all of them.
