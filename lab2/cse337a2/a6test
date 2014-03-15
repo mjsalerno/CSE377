@@ -1,0 +1,5 @@
+1 print( "Enter a number: " ); 
+2 $number = <>; 
+3 chomp( $number ); 
+4 
+5 print "$number is an even number\n” if $number %2==0;
