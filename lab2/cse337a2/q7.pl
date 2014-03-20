@@ -25,16 +25,6 @@ while ( my $line = <FILE> ) {
 	$count++;
 }
 
- # for my $key ( keys %names ) {
- #        my @value = $names{$key};
- #        print "$key => ";
-
- #        foreach my $x (@{$names{$key}}) {
- #        	print " $x";
- #        }
- #        print"\n";
- #    }
-
  for my $key ( keys %names ) {
         my @value = $names{$key};
         print "Group Number: $key\n";
