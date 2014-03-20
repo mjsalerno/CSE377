@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#--------------------
 #q3.pl
 use strict;
 use warnings;
