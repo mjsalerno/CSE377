@@ -17,7 +17,7 @@ sub circle_stats {
 	return wantarray ? ($a, $d, $c) : $a;
 }
 
-print "ander a radius: ";
+print "enter a radius: ";
 my $n = <>;
 
 my $a = circle_stats($n);
