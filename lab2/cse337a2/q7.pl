@@ -10,27 +10,27 @@ my $group = 1;
 my %names;
 
 # for (my $i = 1; $i <= $n; $i++) {
-# 	$names{$i} = []; 
+# 	$names{$i} = [];
 # }
 
 open FILE, "< $fname";
 while ( my $line = <FILE> ) {
-	chomp($line);
-	if($count == $n) {
-		$count = 0;
-		$group++;
-		$names{$group} = [];	
-	}
-	push(@{$names{($group)}}, $line); 
-	$count++;
+    chomp($line);
+    if ( $count == $n ) {
+        $count = 0;
+        $group++;
+        $names{$group} = [];
+    }
+    push( @{ $names{ ($group) } }, $line );
+    $count++;
 }
 
- for my $key ( keys %names ) {
-        my @value = $names{$key};
-        print "Group Number: $key\n";
+for my $key ( keys %names ) {
+    my @value = $names{$key};
+    print "Group Number: $key\n";
 
-        foreach my $x (@{$names{$key}}) {
-        	print "$x\n";
-        }
-        print"\n";
+    foreach my $x ( @{ $names{$key} } ) {
+        print "$x\n";
     }
+    print "\n";
+}

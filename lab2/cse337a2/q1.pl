@@ -9,7 +9,6 @@ my $str = <>;
 print "How many times do you want to print it? ";
 my $n = <>;
 
-
-for (; $n > 0; $n--) {
-	print "$str";
+for ( ; $n > 0; $n-- ) {
+    print "$str";
 }
