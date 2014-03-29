@@ -20,7 +20,9 @@ while ( $in = <> ) {
 print "\n";
 
 foreach my $str (@strings) {
-	if ($str =~ /$regex)/) {
-		print();
+	if ($str =~ s/$regex/<$regex>/) {
+		print "$str\n";
+	} esle {
+		print "NO MATCH: $str\n";
 	}
 }
