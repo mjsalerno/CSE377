@@ -21,7 +21,7 @@ print "\n";
 
 foreach my $str (@strings) {
 	if ($str =~ m/$regex/) {
-		print "$`<$&>$'\n";
+		print "$`<$&>$' \n";
 	} else {
 		print "NO MATCH: $str\n";
 	}
