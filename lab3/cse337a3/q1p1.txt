@@ -1,0 +1,12 @@
+Question 1 part 1
+
+Does the pattern foobar match any of the following strings: 
+foobarshop, Foobar, barfoobar, linkfoobar? 
+If so, highlight the part of string that is matched
+
+
+<foobar>shop
+Foobar no match
+bar<foobar>
+link<foobar>
+
