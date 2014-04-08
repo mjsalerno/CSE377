@@ -1,0 +1,16 @@
+Question 1 part 3
+
+Write a regular expression that matches any string that contains at least one m followed by 
+any number of n’s. Note that followed means immediately followed, and any number 
+might be zero. Highlight the part of string that is matched, for the following strings: 
+dome, foobar, mmm, min, column, common. Now write another regular 
+expression to achieve the same
+
+regex: m+n*
+
+do<m>e
+foobar no match
+<mmm>
+<m>in
+colu<mn>
+co<mm>on
