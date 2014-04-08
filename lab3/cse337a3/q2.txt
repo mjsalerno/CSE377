@@ -1,0 +1,49 @@
+Question 2 all parts
+
+What would the following regular expressions match or do? Be precise, complete, and give 
+reasons. For each pattern, give two good example strings to illustrate your answer. Note that 
+good means it is as general and different from other examples as possible. 
+
+
+(1) /”([^”]*)”/ (6pts) Note that in the pattern, ” is a double-quote. 
+
+	This matches any part of a string that has a " followed by any number of ^ and "
+	followed by another "
+
+	" 		matches the " character
+	[^"]* 	matches any number of * and ^
+
+	matching
+	--------
+	""^^""^""
+	"""
+
+	non-matching
+	------------
+	"^
+	^"
+
+
+(2) /^\b[\w.]{2,9}\b$/ (6pts) 
+
+	this matches any word between 2 and 9 letters and dots long
+	that are enclosed in a word boundary
+
+	^\b   	means begins with word boundry
+	[\w.] 	means match any word char or .
+	{2,9} 	means match the thing behind it 2 - 9 times
+	\b$   	means end in word boundry
+
+	matching
+	--------
+	hello
+	bye
+
+	non-matching
+	------------
+	helllllllo
+	b
+
+(3) s/(\w+)(\s)+(\w+)/\3\2\1/ (6pts)
+	
+	
