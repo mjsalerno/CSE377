@@ -1,0 +1,16 @@
+(2) 
+	Find a regular expression that matches three consecutive copies of the regular expression
+	foo|bar. Your pattern should match foofoofoo, foobarbar, barbarbar. Use 
+	the program in 1(2) to test your pattern. Give two good examples to verify your script. 
+	Hint: think of quantifiers (4pts) 
+
+(3) 
+	Find a regular expression that matches a word. A word is a sequence of letters (either 
+	lower or upper case), digits, and underscores. Now find a different regular expression that 
+	does the same thing. Give two good examples to verify your answers. (4pts) 
+
+(4) 
+	Find a regular expression that matches any line of input that has the same word repeated 
+	two or more times consecutively in a row. Assume there is one space between consecutive 
+	words. Use the script in 1(2) to test your pattern. Also pay attention to word boundaries. 
+	Give two good examples to verify your answer. Hint: use group and back references (6pts) 
