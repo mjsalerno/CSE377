@@ -4,13 +4,38 @@
 	the program in 1(2) to test your pattern. Give two good examples to verify your script. 
 	Hint: think of quantifiers (4pts) 
 
+		regex: (foo|bar){3}
+
+		matches            non-matching
+		-------            ------------
+		foofoofoo           foo
+		barfoobar           barfoo
+
+
 (3) 
 	Find a regular expression that matches a word. A word is a sequence of letters (either 
 	lower or upper case), digits, and underscores. Now find a different regular expression that 
-	does the same thing. Give two good examples to verify your answers. (4pts) 
+	does the same thing. Give two good examples to verify your answers. (4pts)
+
+		first reges: \w+              or  \b\w+\b
+		second regex: [A-Za-z0-9_]+   or  \b[A-Za-z0-9_]+\b
+
+		matches            non-matching
+		-------            ------------
+		hello              !@#$%^&*()
+		g00d_buy           <>?:"{}
 
 (4) 
 	Find a regular expression that matches any line of input that has the same word repeated 
 	two or more times consecutively in a row. Assume there is one space between consecutive 
 	words. Use the script in 1(2) to test your pattern. Also pay attention to word boundaries. 
 	Give two good examples to verify your answer. Hint: use group and back references (6pts) 
+
+		regex: \b(.+)( \1)+\b
+
+
+		matches              non-matctching
+		-------              --------------
+		h h h                hello hellohello hello
+		bye bye              bye hi bye
+		
