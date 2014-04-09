@@ -1,3 +1,5 @@
+Question 3 parts 2, 3, 4
+
 (2) 
 	Find a regular expression that matches three consecutive copies of the regular expression
 	foo|bar. Your pattern should match foofoofoo, foobarbar, barbarbar. Use 
