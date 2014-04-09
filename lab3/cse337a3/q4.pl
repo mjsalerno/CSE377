@@ -16,5 +16,3 @@ if ($string1 eq $string2) {
 } else {
 	print "$string1 is NOT a palindrome\n";
 }
-
-

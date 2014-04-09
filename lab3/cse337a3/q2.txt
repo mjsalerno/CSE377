@@ -13,15 +13,10 @@ good means it is as general and different from other examples as possible.
 	" 		matches the " character
 	[^"]* 	matches any number of * and ^
 
-	matching
-	--------
-	""^^""^""
-	"""
-
-	non-matching
-	------------
-	"^
-	^"
+	 matching           non-matching 
+	---------- 	        ------------ 
+	 ""^^""^"" 	             "^  
+	    """       	         ^" 
 
 
 (2) /^\b[\w.]{2,9}\b$/ (6pts) 
@@ -34,16 +29,23 @@ good means it is as general and different from other examples as possible.
 	{2,9} 	means match the thing behind it 2 - 9 times
 	\b$   	means end in word boundry
 
-	matching
-	--------
-	hello
-	bye
-
-	non-matching
-	------------
-	helllllllo
-	b
+	matching              non-matching   
+	-------- 	          ------------   
+	hello    	           helllllllo   
+	bye      	           b   
 
 (3) s/(\w+)(\s)+(\w+)/\3\2\1/ (6pts)
 	
-	
+	this takes two words at the beginning of the line and swaps them.
+	a b c would become b a c
+	dog cat would become cat dog
+	it also makes more than one space just one spaces in between
+	the first and second word.
+
+	s/    substitution
+	(\w+) one or more word chars
+	(\s)+ one or more space char
+
+	\3\2\1 (i think it should be $3$2$1) takes what matched the 
+		   third group and puts it befor what matched the second group, 
+		   then puts what matched the first group after that.
