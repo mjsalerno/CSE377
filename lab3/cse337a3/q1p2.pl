@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 ####################
-#Question 2
+#Question 1 part 2
 use strict;
 use warnings;
 
