@@ -14,3 +14,20 @@ foobar no match
 <m>in
 colu<mn>
 co<mm>on
+
+---------------------
+| Question 1 part 3 |
+---------------------
+
+Find a regular expression that matches any string that contains any number of backslashes 
+followed by any number of asterisks. Highlight the part of string that is matched, for the 
+following five strings: foo, \\**, bar \\\***, *foobar\, /**/
+
+regex: \\*\**
+
+<>foo          <--- it matches empty string
+<\\**>
+<>bar \\\***   <--- will match empty string first
+<*>foobar\
+<>/**/
+
