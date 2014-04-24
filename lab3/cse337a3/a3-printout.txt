@@ -1,0 +1,227 @@
+
+####################
+Question 1 part 1
+
+Does the pattern foobar match any of the following strings: 
+foobarshop, Foobar, barfoobar, linkfoobar? 
+If so, highlight the part of string that is matched
+
+
+<foobar>shop
+Foobar no match
+bar<foobar>
+link<foobar>
+
+
+#!/usr/bin/perl
+####################
+#Question 1 part 2
+use strict;
+use warnings;
+
+print "Enter the regex: ";
+my $regex = <>;
+chomp($regex);
+
+my @strings = ();
+my $in;
+
+print "Press ctrl-D to stop entering strings\n";
+print "Enter the strings to check\n";
+
+while ( $in = <> ) {
+	chomp($in);
+    push( @strings, $in );
+}
+
+print "\n";
+
+foreach my $str (@strings) {
+	if ($str =~ m/$regex/) {
+		print "$`<$&>$' \n";
+	} else {
+		print "NO MATCH: $str\n";
+	}
+}
+
+####################
+Question 1 part 3
+
+Write a regular expression that matches any string that contains at least one m followed by 
+any number of n’s. Note that followed means immediately followed, and any number 
+might be zero. Highlight the part of string that is matched, for the following strings: 
+dome, foobar, mmm, min, column, common. Now write another regular 
+expression to achieve the same
+
+regex: m+n*
+
+do<m>e
+foobar no match
+<mmm>
+<m>in
+colu<mn>
+co<mm>on
+
+####################
+---------------------
+| Question 1 part 4 |
+---------------------
+
+Find a regular expression that matches any string that contains any number of backslashes 
+followed by any number of asterisks. Highlight the part of string that is matched, for the 
+following five strings: foo, \\**, bar \\\***, *foobar\, /**/
+
+regex: \\*\**
+
+<>foo          <--- it matches empty string
+<\\**>
+<>bar \\\***   <--- will match empty string first
+<*>foobar\
+<>/**/
+
+
+####################
+Question 2 all parts
+
+What would the following regular expressions match or do? Be precise, complete, and give 
+reasons. For each pattern, give two good example strings to illustrate your answer. Note that 
+good means it is as general and different from other examples as possible. 
+
+
+(1) /”([^”]*)”/ (6pts) Note that in the pattern, ” is a double-quote. 
+
+	This matches any part of a string that has a " followed by any number of ^ and "
+	followed by another "
+
+	" 		matches the " character
+	[^"]* 	matches any number of * and ^
+
+	 matching           non-matching 
+	---------- 	        ------------ 
+	 ""^^""^"" 	             "^  
+	    """       	         ^" 
+
+
+(2) /^\b[\w.]{2,9}\b$/ (6pts) 
+
+	this matches any word between 2 and 9 letters and dots long
+	that are enclosed in a word boundary
+
+	^\b   	means begins with word boundry
+	[\w.] 	means match any word char or .
+	{2,9} 	means match the thing behind it 2 - 9 times
+	\b$   	means end in word boundry
+
+	matching              non-matching   
+	-------- 	          ------------   
+	hello    	           helllllllo   
+	bye      	           b   
+
+(3) s/(\w+)(\s)+(\w+)/\3\2\1/ (6pts)
+	
+	this takes two words at the beginning of the line and swaps them.
+	a b c would become b a c
+	dog cat would become cat dog
+	it also makes more than one space just one spaces in between
+	the first and second word.
+
+	s/    substitution
+	(\w+) one or more word chars
+	(\s)+ one or more space char
+
+	\3\2\1 (i think it should be $3$2$1) takes what matched the 
+		   third group and puts it befor what matched the second group, 
+		   then puts what matched the first group after that.
+
+#!/usr/bin/perl
+####################
+#Question 3 part 1
+use strict;
+use warnings;
+
+my @strings = ();
+my $in;
+
+print "Press ctrl-D to stop entering strings\n";
+print "Enter the strings to check\n";
+
+while ( $in = <> ) {
+    chomp($in);
+    push( @strings, $in );
+}
+
+print "\n";
+
+foreach my $str (@strings) {
+    if ( $str =~ m/foo/ && $str =~ m/bar/ ) {
+        print "$str\n";
+    }
+    else {
+        print "NO MATCH: $str\n";
+    }
+}
+
+####################
+Question 3 parts 2, 3, 4
+
+(2) 
+	Find a regular expression that matches three consecutive copies of the regular expression
+	foo|bar. Your pattern should match foofoofoo, foobarbar, barbarbar. Use 
+	the program in 1(2) to test your pattern. Give two good examples to verify your script. 
+	Hint: think of quantifiers (4pts) 
+
+		regex: (foo|bar){3}
+
+		matches            non-matching
+		-------            ------------
+		foofoofoo           foo
+		barfoobar           barfoo
+
+
+(3) 
+	Find a regular expression that matches a word. A word is a sequence of letters (either 
+	lower or upper case), digits, and underscores. Now find a different regular expression that 
+	does the same thing. Give two good examples to verify your answers. (4pts)
+
+		first reges: \w+              or  \b\w+\b
+		second regex: [A-Za-z0-9_]+   or  \b[A-Za-z0-9_]+\b
+
+		matches            non-matching
+		-------            ------------
+		hello              !@#$%^&*()
+		g00d_buy           <>?:"{}
+
+(4) 
+	Find a regular expression that matches any line of input that has the same word repeated 
+	two or more times consecutively in a row. Assume there is one space between consecutive 
+	words. Use the script in 1(2) to test your pattern. Also pay attention to word boundaries. 
+	Give two good examples to verify your answer. Hint: use group and back references (6pts) 
+
+		regex: \b(.+)( \1)+\b
+
+
+		matches              non-matctching
+		-------              --------------
+		h h h                hello hellohello hello
+		bye bye              bye hi bye
+		
+#!/usr/bin/perl
+####################
+#Question 4
+use strict;
+use warnings;
+
+print "Enter a string: ";
+my $string1 = <>;
+chomp($string1);
+
+$string1 = $string1 =~ s/\D//rg;
+print "new string: $string1\n";
+
+my $string2 = reverse $string1;
+
+if ($string1 eq $string2) {
+	print "$string1 is a palindrome\n";
+} else {
+	print "$string1 is NOT a palindrome\n";
+}
