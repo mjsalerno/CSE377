@@ -3,5 +3,13 @@ Michael Salerno                                                                 
 
 1)
 	1.	Multitasking means that one user can run many programs at once.
-		Multiuser means that there can be more than one user on the computer. (they dont have to be on at the same time)
-		So one users files can not be changed to any other users without permission.
+		Multiuser means that there can be more than one user on the computer. (they don't have to be on at the same time)
+		So one users files can not be changed to any other users without permission. Linux is a multiuser operating system
+		because you can see that when we use the who command there are many people logged in.
+		there are also file permissions that don't allow other users to edit other users files.
+
+	2.	Two systems programs: Linux and Windows
+		Two application programs: Sublime Text and wireshark, OS is Fedora Linux
+
+	3.	Three UNIX variants: Linux, BSD, GNU Hurd
+		Three Linux Distributions: Fedora, Arch, Slackware
