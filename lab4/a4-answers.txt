@@ -1,0 +1,7 @@
+Michael Salerno                                                                                                                      ID: 108512298
+
+
+1)
+	1.	Multitasking means that one user can run many programs at once.
+		Multiuser means that there can be more than one user on the computer. (they dont have to be on at the same time)
+		So one users files can not be changed to any other users without permission.
