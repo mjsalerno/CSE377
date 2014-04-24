@@ -13,3 +13,16 @@ Michael Salerno                                                                 
 
 	3.	Three UNIX variants: Linux, BSD, GNU Hurd
 		Three Linux Distributions: Fedora, Arch, Slackware
+
+2)
+	1.	When you first login it puts you in csh (env says SHELL=/bin/csh)
+		but I type bash to use bash instead.
+
+	2.	You can use the date command in both bash and csh
+
+	3.	I was born on Dec 27th, 1990
+		I used the command 'cal 1990 -m dec' and it prints out a calender
+		for the month of December in the year of 1990.
+		I was born on a Thursday.
+
+	4.	ssh <username>@<hostname> -p <port>
