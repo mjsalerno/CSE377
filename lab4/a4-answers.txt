@@ -26,3 +26,38 @@ Michael Salerno                                                                 
 		I was born on a Thursday.
 
 	4.	ssh <username>@<hostname> -p <port>
+
+3)
+	1.	There are eight immediate subdirectories 
+		'ls -l'
+		total 112
+		drwxr-xr-x   2 root root 36864 2014-04-09 13:29 bin
+		drwxr-xr-x   2 root root  4096 2011-10-12 10:29 games
+		drwxr-xr-x  35 root root  4096 2011-10-12 10:30 include
+		drwxr-xr-x 190 root root 36864 2014-04-09 13:26 lib
+		drwxr-xr-x  11 root root  4096 2014-04-08 21:14 local
+		drwxr-xr-x   2 root root 12288 2014-04-22 15:00 sbin
+		drwxr-xr-x 289 root root 12288 2014-04-08 10:58 share
+		drwxr-xr-x   4 root root  4096 2011-10-12 10:30 src
+
+		there are 12305 total subdirectories
+		'ls -lR | grep total | wc'
+		 12305   24615  105825
+
+		2.	'mkdir dir1 dir2 dir3'
+			'ls -l'
+			total 12
+			drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir1
+			drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir2
+			drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir3
+
+			this means the owner can read, write, or execute the file
+			users in the same group as me can only execute and read
+			everyone else can only execute
+
+		3.	'echo hello > hi'
+			'echo bye > bye'
+			'cat hi'  		//this prints out one file
+			'cat hi bye' 	//prints out both files
+
+
