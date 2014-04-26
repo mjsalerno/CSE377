@@ -28,7 +28,8 @@ Michael Salerno                                                                 
 	4.	ssh <username>@<hostname> -p <port>
 
 3)
-	1.	There are eight immediate subdirectories 
+	1.	
+		There are eight immediate subdirectories 
 		'ls -l'
 		total 112
 		drwxr-xr-x   2 root root 36864 2014-04-09 13:29 bin
@@ -44,45 +45,66 @@ Michael Salerno                                                                 
 		'ls -lR | grep total | wc'
 		 12305   24615  105825
 
-		2.	'mkdir dir1 dir2 dir3'
-			'ls -l'
-			total 12
-			drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir1
-			drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir2
-			drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir3
+	2.	
+		'mkdir dir1 dir2 dir3'
+		'ls -l'
+		total 12
+		drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir1
+		drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir2
+		drwxr-xr-x 2 mijsalerno fuse 4096 2014-04-24 12:52 dir3
 
-			this means the owner can read, write, or execute the file
-			users in the same group as me can only execute and read
-			everyone else can only execute
+		this means the owner can read, write, or execute the file
+		users in the same group as me can only execute and read
+		everyone else can only execute
 
-		3.	'echo hello > hi'
-			'echo bye > bye'
-			'cat hi'  		//this prints out one file
-			hello
+	3.	
+		'echo hello > hi'
+		'echo bye > bye'
+		'cat hi'  		//this prints out one file
+		hello
 
-			'cat hi bye' 	//prints out both files
-			hello
-			bye
+		'cat hi bye' 	//prints out both files
+		hello
+		bye
 
-		4.	'ls -ltr'
-			total 8
-			-rw-r--r-- 1 mijsalerno fuse 6 2014-04-24 12:55 hi.txt
-			-rw-r--r-- 1 mijsalerno fuse 4 2014-04-24 12:56 bye.txt
+	4.	
+		'ls -ltr'
+		total 8
+		-rw-r--r-- 1 mijsalerno fuse 6 2014-04-24 12:55 hi.txt
+		-rw-r--r-- 1 mijsalerno fuse 4 2014-04-24 12:56 bye.txt
 
-		5.	./subdir
-			'pwd'
-			/home/cou/cse337/students/mijsalerno/dir1/subdir
+	5.	
+		./subdir
+		'pwd'
+		/home/cou/cse337/students/mijsalerno/dir1/subdir
 
-		6.	TODO
+	6.	TODO
 
-	4)
-		1.	'ls | wc'
-		    151     151    1148
-		    there are 151 files and folders in the /bin folder	
-		    there are 1301 files and folders in the /usr/bin folder
+4)
+	1.	
+		'ls | wc'
+	    151     151    1148
+	    there are 151 files and folders in the /bin folder	
+	    there are 1301 files and folders in the /usr/bin folder
 
-		2.	'-maxdepth 1' tells find to just stay in the current directory when looking at files
-			'-type d' says to only show directories
-			'-print' says to print the matches on stdout followed by a newline
-			
+	2.	
+		'-maxdepth 1' tells find to just stay in the current directory when looking at files
+		'-type d' says to only show directories
+		'-print' says to print the matches on stdout followed by a newline
+
+	3. 
+		grep -Pn ".*" file | grep -P "^[5-9]\d:|^1\d\d|^2[0-4]\d:" | grep hello
+
+		the first part numbers each line
+		second part gets lines 50-249
+		the third line gets all of the ones that have hello
+
+	4.
+		grep -Pn ".*" file | grep -P "^[5-9]\d:|^1\d\d|^2[0-4]\d:" | grep hello | grep -v "hello world" | wc
+
+		this is just like the question before it but it it uses the invert match to take out all of
+		the hello worlds then pipes it to word count so we can see how many matched there were
+
+5)
 	
+
