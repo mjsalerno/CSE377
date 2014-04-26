@@ -78,7 +78,8 @@ Michael Salerno                                                                 
 		'pwd'
 		/home/cou/cse337/students/mijsalerno/dir1/subdir
 
-	6.	TODO
+	6.	'ls -ult' if you don't want it in reverse order but
+		'ls -ultr' if you do want it in reverse 
 
 4)
 	1.	
