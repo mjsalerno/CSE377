@@ -69,6 +69,8 @@ Michael Salerno                                                                 
 			-rw-r--r-- 1 mijsalerno fuse 6 2014-04-24 12:55 hi.txt
 			-rw-r--r-- 1 mijsalerno fuse 4 2014-04-24 12:56 bye.txt
 
+		5.	./subdir
+			'pwd'
+			/home/cou/cse337/students/mijsalerno/dir1/subdir
 
-
-
+		
