@@ -73,4 +73,12 @@ Michael Salerno                                                                 
 			'pwd'
 			/home/cou/cse337/students/mijsalerno/dir1/subdir
 
-		
+		6.	TODO
+
+	4)
+		1.	'ls | wc'
+		    151     151    1148
+		    there are 151 files and folders in the /bin folder	
+		    there are 1301 files and folders in the /usr/bin folder
+
+		2.			
