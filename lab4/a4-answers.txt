@@ -58,6 +58,17 @@ Michael Salerno                                                                 
 		3.	'echo hello > hi'
 			'echo bye > bye'
 			'cat hi'  		//this prints out one file
+			hello
+
 			'cat hi bye' 	//prints out both files
+			hello
+			bye
+
+		4.	'ls -ltr'
+			total 8
+			-rw-r--r-- 1 mijsalerno fuse 4 2014-04-24 12:56 bye.txt
+           	-rw-r--r-- 1 mijsalerno fuse 6 2014-04-24 12:55 hi.txt
+
+     	
 
 
