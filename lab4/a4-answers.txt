@@ -116,7 +116,13 @@ Michael Salerno                                                                 
 		find ~ -maxdepth 1 -type f | grep -v homecontent | xargs cat >> homecontent
 		# i dont know how to get the cat of one file
 
-	2.	
+		this ^^^ program uses the date command and redirects it to the homecontent file
+		then it uses the ls command and redirects that.
+		makes an 20 - separator
+		ues the find command to find all files, uses grep to take out the homecontent file
+		then cats them all into the file
+
+	2.
 		#!/bin/perl
 
 		use strict;
@@ -140,3 +146,9 @@ Michael Salerno                                                                 
 				print "$f has $count[0] lines\n"
 			}
 		}
+
+
+		this program is written in perl, it gets the list of files in the folder
+		the it uses grep to take out all of the html files.
+		then it uses the wc command to get the count of the line numbers.
+		it then prints out all of the files that have more than 19 lines
