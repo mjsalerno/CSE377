@@ -81,4 +81,8 @@ Michael Salerno                                                                 
 		    there are 151 files and folders in the /bin folder	
 		    there are 1301 files and folders in the /usr/bin folder
 
-		2.			
+		2.	'-maxdepth 1' tells find to just stay in the current directory when looking at files
+			'-type d' says to only show directories
+			'-print' says to print the matches on stdout followed by a newline
+			
+	
