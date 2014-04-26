@@ -152,3 +152,5 @@ Michael Salerno                                                                 
 		the it uses grep to take out all of the html files.
 		then it uses the wc command to get the count of the line numbers.
 		it then prints out all of the files that have more than 19 lines
+		to use it just run it in the directory you want it to look in and it will 
+		look in there
