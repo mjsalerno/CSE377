@@ -1,5 +1,6 @@
+#!/usr/local/bin/python3
 import cgi
-form = cgi.FieldStorage()  # instantiate only once!
+# form = cgi.FieldStorage()  # instantiate only once!
 
 # FieldStorage.getfirst(name[, default])
 # This method always returns only one value associated with form field name.
@@ -10,10 +11,10 @@ form = cgi.FieldStorage()  # instantiate only once!
 # value specified by the optional parameter default. This parameter defaults
 # to None if not specified
 
-name = form.getfirst('name', 'empty')
+# name = form.getfirst('name', 'empty')
 
 # Avoid script injection escaping the user input
-name = cgi.escape(name)
+# name = cgi.escape(name)
 
 # Triple-quotes
 # Strings can be surrounded in a pair of matching triple-quotes: """ or '''
@@ -24,14 +25,11 @@ name = cgi.escape(name)
 #
 # The extra newline at the end of the second line is needed, which marks the
 # end of HTTP header lines.
-print '''\
-Content-Type: text/html\n
-<html><body>
-'''
-print '''
-<p>The submitted name was "%s"</p>
-</body></html>
-''' % name
+print('Content-Type: text/html\n')
+print('<html><body>')
+print('<p>The submitted name was "%s"</p>')
+print('</body></html>')
+#print(form["name"].value)
 # Python formated output
 # python use format % values for formated output. E.g., a format can be "%s"
 # it will take the object, convert it to string, and print it. "%d" is used
