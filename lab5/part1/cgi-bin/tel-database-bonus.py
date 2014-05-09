@@ -21,9 +21,30 @@ print('''
 <html>
     <head>
         <title>Telephone Database</title>
+        <style>
+            #val {
+                width: 400px;
+                height: 100px;
+                margin-left: 36px;
+            }
+
+            #search {
+                width: 400px;
+            }
+
+            #btns {
+                text-align: center;
+            }
+
+            #fields,#submit_btn_div,#search,#btns,#output {
+                text-align: center;
+            }
+
+        </style>
     </head>
     <body>
 ''')
+print('<div id="output"><br>')
 
 if((op == 'noop')):
     print('You must select an opperation')
@@ -69,11 +90,27 @@ elif(op == 'print'):
 else:
     print('Sorry but there is no opperation called ' + op + '<br>')
 
+    print('</div><br>')
+print('<hr>')
+
 print('''
-        <form method="get" action="../tel-database.html">
-            <input type="submit" id="submit_btn" value="Back">
-        </form>
+        <form method="get" action="cgi-bin/tel-database-bonus.py">
+        <div id="btns">
+            <input type="radio" name="op" value="find">Find
+            <input type="radio" name="op" value="insert">Insert
+            <input type="radio" name="op" value="delete">Delete
+        </div>
+        <br>
+        <div id="fields">
+            Key/Search: <input type="text" id="search" name="key"><br>
+            Value: <input type="text" id="val" name="val"><br>
+        </div>
+        <div id="submit_btn_div">
+            <input type="submit" id="submit_btn" value="Submit">
+        </div>
+    </form>
     </body>
 </html>
 ''')
+
 phonebook.close()
